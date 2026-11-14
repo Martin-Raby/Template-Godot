@@ -4,6 +4,7 @@ extends Control
 @onready var MenuPrincipal = $ContainerMenuPrincipal
 @onready var MenuParametres = $MenuParametres
 @onready var MusiqueFond = $MusiqueFond
+@onready var BoutonQuitter = $ContainerMenuPrincipal/HBoxContainer/VBoxLeft/BoutonQuitter
 
 # Pré charge la scène
 var scene_principale = preload("res://scenes/scene_principale/scene_principale.tscn").instantiate()
@@ -16,12 +17,14 @@ func _ready():
 	MenuParametres.exit_parametres.connect(on_exit_parametres)
 	#Signal pour quitter la scène principale
 	scene_principale.Quitter.connect(on_quitter)
+	#Si la version est faite pour le web, le bouton quitter n'est pas affiché
+	BoutonQuitter.visible = !Global.VersionWeb
 
 #region Paramètres
 ## Entrée : Rien |
 ## Sortie : Rien |
 ## Action : Affiche le menu des paramètres |
-func _on_bouton_parametres_pressed():
+func on_bouton_parametres_pressed():
 	MenuPrincipal.visible = false
 	MenuParametres.set_process(true)
 	MenuParametres.visible = true
@@ -38,7 +41,7 @@ func on_exit_parametres() -> void :
 ## Entrée : Rien |
 ## Sortie : Rien |
 ## Action : Affiche la scène principale (et arrète les effets du menu principal |
-func _on_bouton_jouer_pressed():
+func on_bouton_jouer_pressed():
 	get_tree().root.add_child(scene_principale)
 	MusiqueFond.playing = false
 	MenuPrincipal.visible = false
@@ -63,3 +66,7 @@ func on_quitter () -> void :
 ## Action : Quitte le jeu quand le bouton "Quitter" est utilisé |
 func on_bouton_quitter_pressed() -> void:
 	get_tree().quit()
+
+
+func on_bouton_credits_pressed() -> void:
+	pass # Replace with function body.

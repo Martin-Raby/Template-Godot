@@ -178,8 +178,8 @@ layout_mode = 1
 autoplay = true
 bus = &"Music"
 
-[connection signal="pressed" from="ContainerMenuPrincipal/HBoxContainer/VBoxLeft/BoutonJouer" to="." method="_on_bouton_jouer_pressed"]
+[connection signal="pressed" from="ContainerMenuPrincipal/HBoxContainer/VBoxLeft/BoutonJouer" to="." method="on_bouton_jouer_pressed"]
 [connection signal="pressed" from="ContainerMenuPrincipal/HBoxContainer/VBoxLeft/BoutonQuitter" to="." method="on_bouton_quitter_pressed"]
-[connection signal="pressed" from="ContainerMenuPrincipal/HBoxContainer/VBoxRight/BoutonCredits" to="." method="_on_bouton_parametres_pressed"]
-[connection signal="pressed" from="ContainerMenuPrincipal/HBoxContainer/VBoxRight/BoutonParametres" to="." method="_on_bouton_parametres_pressed"]
+[connection signal="pressed" from="ContainerMenuPrincipal/HBoxContainer/VBoxRight/BoutonCredits" to="." method="on_bouton_credits_pressed"]
+[connection signal="pressed" from="ContainerMenuPrincipal/HBoxContainer/VBoxRight/BoutonParametres" to="." method="on_bouton_parametres_pressed"]
 [connection signal="finished" from="MusiqueFond" to="." method="_on_musique_fond_finished"]

@@ -9,10 +9,12 @@
 script/source = "extends Control
 
 @onready var commandes = $TabContainer/Commandes
+@onready var Affichage = $TabContainer/Affichage
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
-	pass # Replace with function body.
+	if (Global.VersionWeb) :
+		Affichage.queue_free()
 
 func _on_commandes_tab_changed():
 		commandes.MarginContainer.ScrollContainer.VBoxContainer.assigner_bouton6.set_process_unhandled_key_input(false)
