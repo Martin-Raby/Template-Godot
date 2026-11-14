@@ -16,8 +16,6 @@ var scene_principale = preload("res://scenes/scene_principale/scene_principale.t
 func _ready():
 	#Signal pour quitter les paramètres
 	MenuParametres.exit_parametres.connect(on_exit_parametres)
-	#Signal pour quitter la scène principale
-	scene_principale.Quitter.connect(on_quitter)
 	#Si la version est faite pour le web, le bouton quitter n'est pas affiché
 	BoutonQuitter.visible = !Global.VersionWeb
 
@@ -43,24 +41,13 @@ func on_exit_parametres() -> void :
 ## Sortie : Rien |
 ## Action : Affiche la scène principale (et arrète les effets du menu principal |
 func on_bouton_jouer_pressed():
-	get_tree().root.add_child(scene_principale)
-	MusiqueFond.playing = false
-	MenuPrincipal.visible = false
+	get_tree().change_scene_to_node(scene_principale)
 
 ## Entrée : Rien |
 ## Sortie : Rien |
 ## Action : Quand la musique est fini, rejoue la musique |
 func _on_musique_fond_finished() -> void:
 	MusiqueFond.play()
-
-## Entrée : Rien |
-## Sortie : Rien |
-## Action : Quand la scène principale est quitté, affiche correctement le menu principal, prépare la scène principale à être réutilisé, réassigne ses signaux |
-func on_quitter () -> void :
-	MusiqueFond.playing = true
-	MenuPrincipal.visible = true
-	scene_principale = preload("res://scenes/scene_principale/scene_principale.tscn").instantiate()
-	scene_principale.Quitter.connect(on_quitter)
 
 ## Entrée : Rien |
 ## Sortie : Rien |
@@ -72,7 +59,6 @@ func on_bouton_quitter_pressed() -> void:
 func on_bouton_credits_pressed() -> void:
 	MenuPrincipal.visible = false
 	Credits.visible = true
-
 
 func on_credits_fini() -> void:
 	MenuPrincipal.visible = true

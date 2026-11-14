@@ -8,7 +8,7 @@ func _ready() -> void:
 	if Global.DefilementCredits :
 		TexteCredits.position = Vector2(50.0, get_viewport().size[1])
 
-func _process(delta: float) -> void:
+func _process(_delta: float) -> void:
 	if Input.is_action_just_pressed("PAUSE") || TexteCredits.position[1] <= 0 - TexteCredits.size[1]:
 		finir_credits()
 	elif Global.DefilementCredits :

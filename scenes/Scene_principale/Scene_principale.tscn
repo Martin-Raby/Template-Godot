@@ -1,7 +1,7 @@
 [gd_scene format=3 uid="uid://0285bufly8f1"]
 
 [ext_resource type="Script" uid="uid://r3sj8xcg0s5" path="res://scenes/scene_principale/scene_principale.gd" id="1_bh2ta"]
-[ext_resource type="PackedScene" uid="uid://di4chlep1t1or" path="res://scenes/parametres/menu_parametres.tscn" id="2_gwbgi"]
+[ext_resource type="PackedScene" uid="uid://di4chlep1t1or" path="res://scenes/menus/parametres/menu_parametres.tscn" id="2_gwbgi"]
 
 [node name="ScenePrincipale" type="Node2D" unique_id=1583667612]
 script = ExtResource("1_bh2ta")
@@ -10,5 +10,6 @@ script = ExtResource("1_bh2ta")
 visible = false
 offset_right = 1280.0
 offset_bottom = 720.0
+AfficheBoutonMenu = true
 
 [connection signal="exit_parametres" from="MenuParametres" to="." method="on_exit_parametres"]

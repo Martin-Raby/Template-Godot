@@ -1,6 +1,6 @@
 [gd_scene format=3 uid="uid://dah5m6qsf1fdr"]
 
-[ext_resource type="Script" uid="uid://cobeno4y5tm2r" path="res://scenes/parametres/slide_menu/slide_menu.gd" id="1_q83rq"]
+[ext_resource type="Script" uid="uid://cobeno4y5tm2r" path="res://scenes/menus/parametres/slide_menu/slide_menu.gd" id="1_q83rq"]
 [ext_resource type="Theme" uid="uid://737drhkoj7au" path="res://ressources/themes/police_ecriture.tres" id="1_xri24"]
 
 [node name="SlideMenu" type="Control" unique_id=165978337]

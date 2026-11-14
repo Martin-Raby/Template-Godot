@@ -1,6 +1,6 @@
 [gd_scene format=3 uid="uid://5r6po3u7d7sa"]
 
-[ext_resource type="Script" uid="uid://c0apo5rvt3kko" path="res://scenes/credits/credits.gd" id="1_677rg"]
+[ext_resource type="Script" uid="uid://c0apo5rvt3kko" path="res://scenes/menus/credits/credits.gd" id="1_677rg"]
 [ext_resource type="Theme" uid="uid://737drhkoj7au" path="res://ressources/themes/police_ecriture.tres" id="1_ymb2p"]
 [ext_resource type="Texture2D" uid="uid://ckj5oqxrc2bgd" path="res://ressources/images/ui/menu_jeu_button.svg" id="3_kb4v8"]
 [ext_resource type="Texture2D" uid="uid://b4elxs7cenqeq" path="res://ressources/images/ui/menu_jeu_button_survole.svg" id="4_yudwt"]

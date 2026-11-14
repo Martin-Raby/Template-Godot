@@ -1,13 +1,13 @@
 [gd_scene format=3 uid="uid://bmwgfrd8butry"]
 
-[ext_resource type="Script" uid="uid://d0nyy5nelvkkd" path="res://scenes/menu_principal/menu_principal.gd" id="1_57x4j"]
-[ext_resource type="Texture2D" uid="uid://ckj5oqxrc2bgd" path="res://ressources/images/ui/menu_jeu_button.svg" id="2_3jvir"]
-[ext_resource type="Texture2D" uid="uid://b4elxs7cenqeq" path="res://ressources/images/ui/menu_jeu_button_survole.svg" id="3_po8b6"]
-[ext_resource type="Theme" uid="uid://737drhkoj7au" path="res://ressources/themes/police_ecriture.tres" id="4_3jvir"]
-[ext_resource type="Texture2D" uid="uid://8gnaloa0vljm" path="res://ressources/images/ui/menu_jeu_tiny_button.svg" id="4_eqv07"]
-[ext_resource type="Texture2D" uid="uid://dgkers5n24soj" path="res://ressources/images/ui/menu_jeu_tiny_button_survole.svg" id="5_b5s1v"]
-[ext_resource type="PackedScene" uid="uid://di4chlep1t1or" path="res://scenes/parametres/menu_parametres.tscn" id="6_8kbuk"]
-[ext_resource type="PackedScene" uid="uid://5r6po3u7d7sa" path="res://scenes/credits/Credits.tscn" id="8_po8b6"]
+[ext_resource type="Theme" uid="uid://737drhkoj7au" path="res://ressources/themes/police_ecriture.tres" id="1_awhvj"]
+[ext_resource type="Script" uid="uid://d0nyy5nelvkkd" path="res://scenes/menus/menu_principal/menu_principal.gd" id="2_o8j3t"]
+[ext_resource type="Texture2D" uid="uid://ckj5oqxrc2bgd" path="res://ressources/images/ui/menu_jeu_button.svg" id="3_0su1q"]
+[ext_resource type="Texture2D" uid="uid://b4elxs7cenqeq" path="res://ressources/images/ui/menu_jeu_button_survole.svg" id="4_hn7vl"]
+[ext_resource type="Texture2D" uid="uid://8gnaloa0vljm" path="res://ressources/images/ui/menu_jeu_tiny_button.svg" id="5_ldqdv"]
+[ext_resource type="Texture2D" uid="uid://dgkers5n24soj" path="res://ressources/images/ui/menu_jeu_tiny_button_survole.svg" id="6_3hl3g"]
+[ext_resource type="PackedScene" uid="uid://di4chlep1t1or" path="res://scenes/menus/parametres/menu_parametres.tscn" id="7_1dall"]
+[ext_resource type="PackedScene" uid="uid://5r6po3u7d7sa" path="res://scenes/menus/credits/Credits.tscn" id="8_uu7kd"]
 
 [node name="MenuPrincipal" type="Control" unique_id=843324627]
 layout_mode = 3
@@ -16,8 +16,8 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
-theme = ExtResource("4_3jvir")
-script = ExtResource("1_57x4j")
+theme = ExtResource("1_awhvj")
+script = ExtResource("2_o8j3t")
 
 [node name="ImageFond" type="TextureRect" parent="." unique_id=1717226711]
 layout_mode = 1
@@ -62,9 +62,9 @@ size_flags_vertical = 3
 [node name="BoutonJouer" type="TextureButton" parent="ContainerMenuPrincipal/HBoxContainer/VBoxLeft" unique_id=549709171]
 custom_minimum_size = Vector2(248, 0)
 layout_mode = 2
-texture_normal = ExtResource("2_3jvir")
-texture_pressed = ExtResource("3_po8b6")
-texture_hover = ExtResource("3_po8b6")
+texture_normal = ExtResource("3_0su1q")
+texture_pressed = ExtResource("4_hn7vl")
+texture_hover = ExtResource("4_hn7vl")
 stretch_mode = 0
 
 [node name="LabelJouer" type="Label" parent="ContainerMenuPrincipal/HBoxContainer/VBoxLeft/BoutonJouer" unique_id=1322282218]
@@ -86,9 +86,9 @@ size_flags_vertical = 3
 [node name="BoutonQuitter" type="TextureButton" parent="ContainerMenuPrincipal/HBoxContainer/VBoxLeft" unique_id=2105164533]
 custom_minimum_size = Vector2(248, 0)
 layout_mode = 2
-texture_normal = ExtResource("2_3jvir")
-texture_pressed = ExtResource("3_po8b6")
-texture_hover = ExtResource("3_po8b6")
+texture_normal = ExtResource("3_0su1q")
+texture_pressed = ExtResource("4_hn7vl")
+texture_hover = ExtResource("4_hn7vl")
 stretch_mode = 0
 
 [node name="LabelQuitter" type="Label" parent="ContainerMenuPrincipal/HBoxContainer/VBoxLeft/BoutonQuitter" unique_id=1924010755]
@@ -121,9 +121,9 @@ theme_override_constants/separation = 355
 [node name="BoutonCredits" type="TextureButton" parent="ContainerMenuPrincipal/HBoxContainer/VBoxRight" unique_id=860122595]
 custom_minimum_size = Vector2(200, 150)
 layout_mode = 2
-texture_normal = ExtResource("4_eqv07")
-texture_pressed = ExtResource("5_b5s1v")
-texture_hover = ExtResource("5_b5s1v")
+texture_normal = ExtResource("5_ldqdv")
+texture_pressed = ExtResource("6_3hl3g")
+texture_hover = ExtResource("6_3hl3g")
 stretch_mode = 0
 
 [node name="LabelCredits" type="Label" parent="ContainerMenuPrincipal/HBoxContainer/VBoxRight/BoutonCredits" unique_id=30659139]
@@ -141,9 +141,9 @@ language = "fr_FR"
 [node name="BoutonParametres" type="TextureButton" parent="ContainerMenuPrincipal/HBoxContainer/VBoxRight" unique_id=880730463]
 custom_minimum_size = Vector2(200, 150)
 layout_mode = 2
-texture_normal = ExtResource("4_eqv07")
-texture_pressed = ExtResource("5_b5s1v")
-texture_hover = ExtResource("5_b5s1v")
+texture_normal = ExtResource("5_ldqdv")
+texture_pressed = ExtResource("6_3hl3g")
+texture_hover = ExtResource("6_3hl3g")
 stretch_mode = 0
 
 [node name="LabelParametres" type="Label" parent="ContainerMenuPrincipal/HBoxContainer/VBoxRight/BoutonParametres" unique_id=950879401]
@@ -169,11 +169,11 @@ modulate = Color(1, 1, 1, 0)
 self_modulate = Color(1, 1, 1, 0)
 layout_mode = 2
 
-[node name="MenuParametres" parent="." unique_id=1805913762 instance=ExtResource("6_8kbuk")]
+[node name="MenuParametres" parent="." unique_id=1037719077 instance=ExtResource("7_1dall")]
 visible = false
 layout_mode = 1
 
-[node name="Credits" parent="." unique_id=1168084038 instance=ExtResource("8_po8b6")]
+[node name="Credits" parent="." unique_id=1168084038 instance=ExtResource("8_uu7kd")]
 visible = false
 layout_mode = 1
 

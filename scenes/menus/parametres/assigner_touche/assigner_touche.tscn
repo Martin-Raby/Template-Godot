@@ -1,6 +1,6 @@
 [gd_scene format=3 uid="uid://n5vmjs3xhmma"]
 
-[ext_resource type="Script" uid="uid://ce75ifabdg8i2" path="res://scenes/parametres/assigner_touche/assigner_touche.gd" id="1_jtqf2"]
+[ext_resource type="Script" uid="uid://ce75ifabdg8i2" path="res://scenes/menus/parametres/assigner_touche/assigner_touche.gd" id="1_jtqf2"]
 [ext_resource type="Theme" uid="uid://737drhkoj7au" path="res://ressources/themes/police_ecriture.tres" id="2_cf0nl"]
 
 [node name="assigner_bouton" type="Control" unique_id=8714067 groups=["changer_touches"]]

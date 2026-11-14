@@ -1,10 +1,10 @@
 [gd_scene format=3 uid="uid://d0ulsovtj84go"]
 
 [ext_resource type="Theme" uid="uid://737drhkoj7au" path="res://ressources/themes/police_ecriture.tres" id="1_e4r8t"]
-[ext_resource type="PackedScene" uid="uid://bql1rrrswwr0y" path="res://scenes/parametres/menu_deroulant/menu_deroulant_fenetre.tscn" id="1_ykvgu"]
-[ext_resource type="PackedScene" uid="uid://d30k33gvnoo46" path="res://scenes/parametres/menu_deroulant/menu_deroulant_resolution.tscn" id="2_e4r8t"]
-[ext_resource type="PackedScene" uid="uid://dah5m6qsf1fdr" path="res://scenes/parametres/slide_menu/slide_menu.tscn" id="3_4tew8"]
-[ext_resource type="PackedScene" uid="uid://n5vmjs3xhmma" path="res://scenes/parametres/assigner_touche/assigner_touche.tscn" id="4_chw0c"]
+[ext_resource type="PackedScene" uid="uid://bql1rrrswwr0y" path="res://scenes/menus/parametres/menu_deroulant/menu_deroulant_fenetre.tscn" id="1_ykvgu"]
+[ext_resource type="PackedScene" uid="uid://d30k33gvnoo46" path="res://scenes/menus/parametres/menu_deroulant/menu_deroulant_resolution.tscn" id="2_e4r8t"]
+[ext_resource type="PackedScene" uid="uid://dah5m6qsf1fdr" path="res://scenes/menus/parametres/slide_menu/slide_menu.tscn" id="3_4tew8"]
+[ext_resource type="PackedScene" uid="uid://n5vmjs3xhmma" path="res://scenes/menus/parametres/assigner_touche/assigner_touche.tscn" id="4_chw0c"]
 
 [sub_resource type="GDScript" id="GDScript_nexub"]
 script/source = "extends Control

@@ -1,10 +1,10 @@
+HBoxContainer
+Button
 AnimationPlayer
 Label
 TextureButton
 Control
 HSeparator
-HBoxContainer
-Button
 AudioStreamPlayer
 Area2D
 AudioStreamPlayer2D

@@ -26,3 +26,8 @@ res://ressources/themes/theme_label_principal.tres
 res://ressources/themes/police_ecriture.tres
 res://scenes/credits/Credits.tscn
 res://scenes/credits/credits.gd
+res://scenes/menus/menu_principal/menu_principal.tscn
+res://scenes/menus/menu_principal/menu_principal.gd
+res://scenes/menus/credits/credits.gd
+res://scenes/menus/parametres/menu_parametres.tscn
+res://scenes/menus/parametres/menu_parametres.gd
