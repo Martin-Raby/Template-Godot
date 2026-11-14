@@ -55,7 +55,3 @@ func set_slider_value () -> void:
 ## Action : Récupère l'index du bus en fonction du paramètre d'entrée |
 func connect_bus_index () -> void : 
 	bus_index = AudioServer.get_bus_index(bus_name)
-
-# Called every frame. 'delta' is the elapsed time since the previous frame.
-func _process(delta):
-	pass

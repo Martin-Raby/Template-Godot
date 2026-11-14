@@ -7,7 +7,7 @@
 [ext_resource type="Texture2D" uid="uid://dgkers5n24soj" path="res://ressources/images/ui/menu_jeu_tiny_button_survole.svg" id="5_b5s1v"]
 [ext_resource type="PackedScene" uid="uid://di4chlep1t1or" path="res://scenes/parametres/menu_parametres.tscn" id="6_8kbuk"]
 
-[node name="Menu_principal_affichage" type="Control" unique_id=843324627]
+[node name="MenuPrincipal" type="Control" unique_id=843324627]
 layout_mode = 3
 anchors_preset = 15
 anchor_right = 1.0
@@ -24,7 +24,7 @@ anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
 
-[node name="Menu_principal" type="MarginContainer" parent="." unique_id=1448382860]
+[node name="ContainerMenuPrincipal" type="MarginContainer" parent="." unique_id=1448382860]
 layout_mode = 1
 anchors_preset = 15
 anchor_right = 1.0
@@ -36,27 +36,27 @@ theme_override_constants/margin_top = 12
 theme_override_constants/margin_right = 12
 theme_override_constants/margin_bottom = 12
 
-[node name="HBoxContainer" type="HBoxContainer" parent="Menu_principal" unique_id=264743259]
+[node name="HBoxContainer" type="HBoxContainer" parent="ContainerMenuPrincipal" unique_id=264743259]
 layout_mode = 2
 theme_override_constants/separation = 93
 
-[node name="VSeparator" type="VSeparator" parent="Menu_principal/HBoxContainer" unique_id=1198666733]
+[node name="VSeparator" type="VSeparator" parent="ContainerMenuPrincipal/HBoxContainer" unique_id=1198666733]
 modulate = Color(1, 1, 1, 0)
 self_modulate = Color(1, 1, 1, 0)
 layout_mode = 2
 theme_override_constants/separation = -200
 
-[node name="VBoxMainButton" type="VBoxContainer" parent="Menu_principal/HBoxContainer" unique_id=60943235]
+[node name="VBoxLeft" type="VBoxContainer" parent="ContainerMenuPrincipal/HBoxContainer" unique_id=60943235]
 layout_mode = 2
 theme_override_constants/separation = 48
 
-[node name="HSeparator" type="HSeparator" parent="Menu_principal/HBoxContainer/VBoxMainButton" unique_id=2019919342]
+[node name="HSeparator" type="HSeparator" parent="ContainerMenuPrincipal/HBoxContainer/VBoxLeft" unique_id=2019919342]
 modulate = Color(0, 0, 0, 0)
 self_modulate = Color(1, 1, 1, 0)
 layout_mode = 2
 size_flags_vertical = 3
 
-[node name="BoutonJouer" type="TextureButton" parent="Menu_principal/HBoxContainer/VBoxMainButton" unique_id=549709171]
+[node name="BoutonJouer" type="TextureButton" parent="ContainerMenuPrincipal/HBoxContainer/VBoxLeft" unique_id=549709171]
 custom_minimum_size = Vector2(248, 0)
 layout_mode = 2
 texture_normal = ExtResource("2_3jvir")
@@ -64,7 +64,7 @@ texture_pressed = ExtResource("3_po8b6")
 texture_hover = ExtResource("3_po8b6")
 stretch_mode = 0
 
-[node name="play_label" type="Label" parent="Menu_principal/HBoxContainer/VBoxMainButton/BoutonJouer" unique_id=1322282218]
+[node name="LabelJouer" type="Label" parent="ContainerMenuPrincipal/HBoxContainer/VBoxLeft/BoutonJouer" unique_id=1322282218]
 modulate = Color(0, 0, 0, 1)
 layout_mode = 0
 offset_right = 256.0
@@ -75,30 +75,30 @@ horizontal_alignment = 1
 vertical_alignment = 1
 language = "fr_FR"
 
-[node name="HSeparator2" type="HSeparator" parent="Menu_principal/HBoxContainer/VBoxMainButton" unique_id=897622032]
+[node name="HSeparator2" type="HSeparator" parent="ContainerMenuPrincipal/HBoxContainer/VBoxLeft" unique_id=897622032]
 modulate = Color(0, 0, 0, 0)
 self_modulate = Color(1, 1, 1, 0)
 layout_mode = 2
 size_flags_vertical = 3
 
-[node name="VSeparator2" type="VSeparator" parent="Menu_principal/HBoxContainer" unique_id=2116130754]
+[node name="VSeparator2" type="VSeparator" parent="ContainerMenuPrincipal/HBoxContainer" unique_id=2116130754]
 modulate = Color(1, 1, 1, 0)
 self_modulate = Color(1, 1, 1, 0)
 layout_mode = 2
 size_flags_horizontal = 3
 
-[node name="VBoxSideButton" type="VBoxContainer" parent="Menu_principal/HBoxContainer" unique_id=197073778]
+[node name="VBoxRight" type="VBoxContainer" parent="ContainerMenuPrincipal/HBoxContainer" unique_id=197073778]
 layout_mode = 2
 theme_override_constants/separation = -34
 
-[node name="HSeparator" type="HSeparator" parent="Menu_principal/HBoxContainer/VBoxSideButton" unique_id=2134463831]
+[node name="HSeparator" type="HSeparator" parent="ContainerMenuPrincipal/HBoxContainer/VBoxRight" unique_id=2134463831]
 modulate = Color(1, 1, 1, 0)
 self_modulate = Color(1, 1, 1, 0)
 layout_mode = 2
 size_flags_vertical = 3
 theme_override_constants/separation = 355
 
-[node name="BoutonParametres" type="TextureButton" parent="Menu_principal/HBoxContainer/VBoxSideButton" unique_id=880730463]
+[node name="BoutonParametres" type="TextureButton" parent="ContainerMenuPrincipal/HBoxContainer/VBoxRight" unique_id=880730463]
 custom_minimum_size = Vector2(200, 150)
 layout_mode = 2
 texture_normal = ExtResource("4_eqv07")
@@ -106,7 +106,7 @@ texture_pressed = ExtResource("5_b5s1v")
 texture_hover = ExtResource("5_b5s1v")
 stretch_mode = 0
 
-[node name="param_label" type="Label" parent="Menu_principal/HBoxContainer/VBoxSideButton/BoutonParametres" unique_id=950879401]
+[node name="LabelParametres" type="Label" parent="ContainerMenuPrincipal/HBoxContainer/VBoxRight/BoutonParametres" unique_id=950879401]
 modulate = Color(0, 0, 0, 1)
 layout_mode = 0
 offset_left = 22.0
@@ -119,18 +119,18 @@ horizontal_alignment = 1
 vertical_alignment = 1
 language = "fr_FR"
 
-[node name="HSeparator2" type="HSeparator" parent="Menu_principal/HBoxContainer/VBoxSideButton" unique_id=207675628]
+[node name="HSeparator2" type="HSeparator" parent="ContainerMenuPrincipal/HBoxContainer/VBoxRight" unique_id=207675628]
 modulate = Color(1, 1, 1, 0)
 self_modulate = Color(1, 1, 1, 0)
 layout_mode = 2
 theme_override_constants/separation = 29
 
-[node name="VSeparator3" type="VSeparator" parent="Menu_principal/HBoxContainer" unique_id=1914137762]
+[node name="VSeparator3" type="VSeparator" parent="ContainerMenuPrincipal/HBoxContainer" unique_id=1914137762]
 modulate = Color(1, 1, 1, 0)
 self_modulate = Color(1, 1, 1, 0)
 layout_mode = 2
 
-[node name="Menu_parametres" parent="." unique_id=1805913762 instance=ExtResource("6_8kbuk")]
+[node name="MenuParametres" parent="." unique_id=1805913762 instance=ExtResource("6_8kbuk")]
 visible = false
 layout_mode = 1
 
@@ -138,6 +138,6 @@ layout_mode = 1
 autoplay = true
 bus = &"Music"
 
-[connection signal="pressed" from="Menu_principal/HBoxContainer/VBoxMainButton/BoutonJouer" to="." method="_on_bouton_jouer_pressed"]
-[connection signal="pressed" from="Menu_principal/HBoxContainer/VBoxSideButton/BoutonParametres" to="." method="_on_bouton_parametres_pressed"]
+[connection signal="pressed" from="ContainerMenuPrincipal/HBoxContainer/VBoxLeft/BoutonJouer" to="." method="_on_bouton_jouer_pressed"]
+[connection signal="pressed" from="ContainerMenuPrincipal/HBoxContainer/VBoxRight/BoutonParametres" to="." method="_on_bouton_parametres_pressed"]
 [connection signal="finished" from="MusiqueFond" to="." method="_on_musique_fond_finished"]

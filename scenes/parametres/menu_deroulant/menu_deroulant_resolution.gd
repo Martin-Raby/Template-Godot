@@ -22,10 +22,6 @@ func set_default_status() -> void :
 	else : 
 		option_button.select(0)
 
-# Called every frame. 'delta' is the elapsed time since the previous frame.
-func _process(delta):
-	pass
-
 func add_resolution_items() -> void:
 	for resolution in RESOLUTION_DICT:
 		option_button.add_item(resolution)

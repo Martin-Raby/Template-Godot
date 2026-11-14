@@ -2,7 +2,6 @@
 
 [ext_resource type="Script" uid="uid://ce75ifabdg8i2" path="res://scenes/parametres/assigner_touche/assigner_touche.gd" id="1_jtqf2"]
 
-
 [node name="assigner_bouton" type="Control" unique_id=8714067 groups=["changer_touches"]]
 layout_mode = 3
 anchors_preset = 15
@@ -27,7 +26,7 @@ grow_horizontal = 2
 grow_vertical = 2
 alignment = 1
 
-[node name="Label" type="Label" parent="HBoxContainer" unique_id=1853382431]
+[node name="NomAction" type="Label" parent="HBoxContainer" unique_id=1853382431]
 custom_minimum_size = Vector2(200, 40)
 layout_mode = 2
 theme_override_font_sizes/font_size = 32
@@ -41,11 +40,11 @@ custom_minimum_size = Vector2(50, 0)
 layout_mode = 2
 size_flags_horizontal = 3
 
-[node name="Button" type="Button" parent="HBoxContainer" unique_id=584785483]
+[node name="BoutonTouche" type="Button" parent="HBoxContainer" unique_id=584785483]
 custom_minimum_size = Vector2(150, 75)
 layout_mode = 2
 theme_override_font_sizes/font_size = 32
 text = "BOUTON_ACTION"
 
 [connection signal="hidden" from="." to="." method="_on_hidden"]
-[connection signal="pressed" from="HBoxContainer/Button" to="." method="_on_button_pressed"]
+[connection signal="pressed" from="HBoxContainer/BoutonTouche" to="." method="_on_button_pressed"]

@@ -1,65 +1,59 @@
 extends Control
 
 # Prépare les noeuds visuels à être appelés dans le code
-@onready var menu_principal = $Menu_principal
-@onready var menu_parametres = $Menu_parametres
-@onready var musique_fond = $MusiqueFond
+@onready var MenuPrincipal = $ContainerMenuPrincipal
+@onready var MenuParametres = $MenuParametres
+@onready var MusiqueFond = $MusiqueFond
 
 # Pré charge la scène
-var MainScene = preload("res://scenes/Scene_principale/Scene_principale.tscn").instantiate()
+var scene_principale = preload("res://scenes/scene_principale/scene_principale.tscn").instantiate()
 
 ## Entrée : Rien |
 ## Sortie : Rien |
 ## Action : Connecte les signaux à leurs fonctions dédiées |
 func _ready():
 	#Signal pour quitter les paramètres
-	menu_parametres.exit_parametres.connect(on_exit_parametres)
+	MenuParametres.exit_parametres.connect(on_exit_parametres)
 	#Signal pour quitter la scène principale
-	MainScene.Quitter.connect(on_quitter)
-
-
-# Called every frame. 'delta' is the elapsed time since the previous frame.
-func _process(delta):
-	# On ne fait rien
-	pass
+	scene_principale.Quitter.connect(on_quitter)
 
 #region Paramètres
 ## Entrée : Rien |
 ## Sortie : Rien |
 ## Action : Affiche le menu des paramètres |
 func _on_bouton_parametres_pressed():
-	menu_principal.visible = false
-	menu_parametres.set_process(true)
-	menu_parametres.visible = true
+	MenuPrincipal.visible = false
+	MenuParametres.set_process(true)
+	MenuParametres.visible = true
 
 ## Entrée : Rien |
 ## Sortie : Rien |
 ## Action : Cache le menu des paramètres |
 func on_exit_parametres() -> void :
-	menu_principal.visible = true 
-	menu_parametres.visible = false
-	menu_parametres.set_process(false)
+	MenuPrincipal.visible = true 
+	MenuParametres.visible = false
+	MenuParametres.set_process(false)
 #endregion
 
 ## Entrée : Rien |
 ## Sortie : Rien |
 ## Action : Affiche la scène principale (et arrète les effets du menu principal |
 func _on_bouton_jouer_pressed():
-	get_tree().root.add_child(MainScene)
-	musique_fond.playing = false
-	menu_principal.visible = false
+	get_tree().root.add_child(scene_principale)
+	MusiqueFond.playing = false
+	MenuPrincipal.visible = false
 
 ## Entrée : Rien |
 ## Sortie : Rien |
 ## Action : Quand la musique est fini, rejoue la musique |
 func _on_musique_fond_finished() -> void:
-	musique_fond.play()
+	MusiqueFond.play()
 
 ## Entrée : Rien |
 ## Sortie : Rien |
 ## Action : Quand la scène principale est quitté, affiche correctement le menu principal, prépare la scène principale à être réutilisé, réassigne ses signaux |
 func on_quitter () -> void :
-	musique_fond.playing = true
-	menu_principal.visible = true
-	MainScene = preload("res://scenes/scene_principale/scene_principale.tscn").instantiate()
-	MainScene.Quitter.connect(on_quitter)
+	MusiqueFond.playing = true
+	MenuPrincipal.visible = true
+	scene_principale = preload("res://scenes/scene_principale/scene_principale.tscn").instantiate()
+	scene_principale.Quitter.connect(on_quitter)

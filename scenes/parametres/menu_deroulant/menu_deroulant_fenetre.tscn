@@ -3,12 +3,11 @@
 [ext_resource type="PackedScene" uid="uid://bbnto4k0qufd7" path="res://scenes/parametres/menu_deroulant/menu_deroulant.tscn" id="1_uosn5"]
 [ext_resource type="Script" uid="uid://cvwd8oupd3yd5" path="res://scenes/parametres/menu_deroulant/menu_deroulant_fenetre.gd" id="2_s8chm"]
 
-
-[node name="Drop_Menu_Parametres_Feunetre" instance=ExtResource("1_uosn5")]
+[node name="Drop_Menu_Parametres_Feunetre" unique_id=821946507 instance=ExtResource("1_uosn5")]
 script = ExtResource("2_s8chm")
 
-[node name="HBoxContainer" parent="." index="0"]
+[node name="HBoxContainer" parent="." index="0" unique_id=253820315]
 alignment = 1
 
-[node name="Label" parent="HBoxContainer" index="1"]
+[node name="Label" parent="HBoxContainer" index="1" unique_id=647359948]
 text = "Mode d'affichage"

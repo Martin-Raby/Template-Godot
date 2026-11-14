@@ -14,11 +14,7 @@ script/source = "extends Control
 func _ready():
 	pass # Replace with function body.
 
-# Called every frame. 'delta' is the elapsed time since the previous frame.
-func _process(delta):
-	pass
-
-func _on_commandes_tab_changed(tab):
+func _on_commandes_tab_changed():
 		commandes.MarginContainer.ScrollContainer.VBoxContainer.assigner_bouton6.set_process_unhandled_key_input(false)
 		commandes.MarginContainer.ScrollContainer.VBoxContainer.assigner_bouton2.set_process_unhandled_key_input(false)
 		commandes.MarginContainer.ScrollContainer.VBoxContainer.assigner_bouton3.set_process_unhandled_key_input(false)

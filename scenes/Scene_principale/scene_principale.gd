@@ -1,7 +1,7 @@
 extends Node2D
 
 #Prépare l'accès aux objets dans la scène dont on a besoin
-@onready var menu_parametres = $Menu_parametres
+@onready var menu_parametres = $MenuParametres
 
 # Signal à envoyer quand on veut quitter la scène
 signal Quitter()
@@ -11,7 +11,7 @@ func _ready() -> void:
 	pass
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
-func _process(delta: float) -> void:
+func _process(_delta: float) -> void:
 	if Input.is_action_just_pressed("PAUSE") :
 		on_param_button_pressed()
 

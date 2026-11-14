@@ -2,7 +2,6 @@
 
 [ext_resource type="FontFile" uid="uid://c2mb6de2hcgpy" path="res://ressources/polices/OpenDyslexic-Regular.otf" id="1_2x8rq"]
 
-
 [node name="Drop_Menu_Parametres" type="Control" unique_id=1271860067]
 layout_mode = 3
 anchors_preset = 15

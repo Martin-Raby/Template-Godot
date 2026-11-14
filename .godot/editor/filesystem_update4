@@ -12,3 +12,10 @@ res://scenes/scene_principale/Scene_principale.tscn
 res://scenes/parametres/slide_menu/slide_menu.tscn
 res://scenes/scene_principale/scene_principale.tscn
 res://scripts/global/load_assets.gd
+res://scenes/parametres/assigner_touche/assigner_touche.tscn
+res://scenes/parametres/assigner_touche/assigner_touche.gd
+res://scenes/parametres/menu_deroulant/menu_deroulant.tscn
+res://scenes/parametres/menu_deroulant/menu_deroulant_fenetre.gd
+res://scenes/parametres/menu_deroulant/menu_deroulant_fenetre.tscn
+res://scenes/parametres/menu_deroulant/menu_deroulant_resolution.gd
+res://scenes/parametres/slide_menu/slide_menu.gd

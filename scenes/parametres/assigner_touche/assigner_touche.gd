@@ -2,8 +2,8 @@ class_name Assigner_Bouton
 extends Control
 
 #Prépare l'accès aux objets dans la scène dont on a besoin
-@onready var label = $HBoxContainer/Label as Label
-@onready var button = $HBoxContainer/Button as Button
+@onready var NomAction = $HBoxContainer/NomAction as Label
+@onready var BoutonTouche = $HBoxContainer/BoutonTouche as Button
 
 #La scène a comme paramètre personnalisé l'action qu'on souhaite changer (par défaut "BOUGER_HAUT")
 #Ces paramètres personalisés sont modifiables dans Projet -> PAramètres du projet -> Contrôles
@@ -19,34 +19,30 @@ func _ready():
 	set_texte_label()
 	set_texte_bouton()
 
-# Called every frame. 'delta' is the elapsed time since the previous frame.
-func _process(delta):
-	pass
-
 ## Entrée : Rien |
 ## Sortie : Rien |
 ## Action : Change le texte de l'action pour être celle sélectionnée |
 func set_texte_label() -> void : 
-	label.text = "Non assignée"
+	NomAction.text = "Non assignée"
 	
 	match nom_action :
 		"BOUGER_HAUT":
-			label.text = "monter"
+			NomAction.text = "monter"
 		"BOUGER_BAS":
-			label.text = "descendre"
+			NomAction.text = "descendre"
 		"BOUGER_DROITE":
-			label.text = "aller à droite"
+			NomAction.text = "aller à droite"
 		"BOUGER_GAUCHE":
-			label.text = "aller à gauche"
+			NomAction.text = "aller à gauche"
 		"PAUSE":
-			label.text = "Pause"
+			NomAction.text = "Pause"
 
 ## Entrée : Rien |
 ## Sortie : Rien |
 ## Action : Change le texte du bouton pour la touche associée à l'action |
 func set_texte_bouton() -> void:
 	nom_touche = OS.get_keycode_string(InputMap.action_get_events(nom_action)[0].physical_keycode)
-	button.text = "%s" % nom_touche
+	BoutonTouche.text = "%s" % nom_touche
 
 ## Entrée : touche un InputEvent |
 ## Sortie : Rien |
@@ -54,7 +50,6 @@ func set_texte_bouton() -> void:
 func definir_touche(touche: InputEvent)-> void:
 	#On sauvegarde l'ancienne s'il y a besoin de l'échanger
 	var old = InputMap.action_get_events(nom_action)[0]
-	var action_keycode=touche.physical_keycode
 	
 	#On supprime l'inpout pour en mettre une nouvelle (et on change l'affichage en conséquence)
 	InputMap.action_erase_events(nom_action)
@@ -72,7 +67,7 @@ func definir_touche(touche: InputEvent)-> void:
 ## Sortie : Rien |
 ## Action : Écoute la prochaine touche pressée (et le montre) |
 func _on_button_pressed():
-	button.text = "Appuyez sur une touche..."
+	BoutonTouche.text = "Appuyez sur une touche..."
 	set_process_unhandled_key_input(true)
 
 ## Entrée : Event (touche pressée) |

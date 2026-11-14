@@ -28,10 +28,6 @@ func set_default_status() -> void :
 		else : 
 			option_button.select(0)
 
-# Called every frame. 'delta' is the elapsed time since the previous frame.
-func _process(delta):
-	pass
-
 func add_window_mode_items() -> void:
 	for mode_fenetre in MODE_FENETRE_LISTE:
 		option_button.add_item(mode_fenetre)
