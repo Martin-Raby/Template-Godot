@@ -1,6 +1,6 @@
 [gd_scene format=3 uid="uid://d0ulsovtj84go"]
 
-[ext_resource type="Theme" uid="uid://dgt61hrtbtmsl" path="res://ressources/themes/theme_label_secondaire.tres" id="1_e4r8t"]
+[ext_resource type="Theme" uid="uid://737drhkoj7au" path="res://ressources/themes/police_ecriture.tres" id="1_e4r8t"]
 [ext_resource type="PackedScene" uid="uid://bql1rrrswwr0y" path="res://scenes/parametres/menu_deroulant/menu_deroulant_fenetre.tscn" id="1_ykvgu"]
 [ext_resource type="PackedScene" uid="uid://d30k33gvnoo46" path="res://scenes/parametres/menu_deroulant/menu_deroulant_resolution.tscn" id="2_e4r8t"]
 [ext_resource type="PackedScene" uid="uid://dah5m6qsf1fdr" path="res://scenes/parametres/slide_menu/slide_menu.tscn" id="3_4tew8"]
@@ -34,6 +34,7 @@ grow_horizontal = 2
 grow_vertical = 2
 size_flags_horizontal = 3
 size_flags_vertical = 3
+theme = ExtResource("1_e4r8t")
 script = SubResource("GDScript_nexub")
 
 [node name="TabContainer" type="TabContainer" parent="." unique_id=501905832]
@@ -41,9 +42,10 @@ layout_mode = 1
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
+offset_top = 4.0
+offset_bottom = 4.0
 grow_horizontal = 2
 grow_vertical = 2
-theme = ExtResource("1_e4r8t")
 tab_alignment = 1
 current_tab = 0
 
@@ -79,6 +81,7 @@ layout_mode = 2
 
 [node name="DropMenuFeunetre" parent="TabContainer/Affichage/MarginContainer/ScrollContainer/VBoxContainer" unique_id=934132835 instance=ExtResource("1_ykvgu")]
 layout_mode = 2
+theme = null
 
 [node name="HSeparator2" type="HSeparator" parent="TabContainer/Affichage/MarginContainer/ScrollContainer/VBoxContainer" unique_id=1262383629]
 modulate = Color(1, 1, 1, 0)
@@ -87,6 +90,7 @@ layout_mode = 2
 
 [node name="DropMenuResolution" parent="TabContainer/Affichage/MarginContainer/ScrollContainer/VBoxContainer" unique_id=985789176 instance=ExtResource("2_e4r8t")]
 layout_mode = 2
+theme = null
 
 [node name="Son" type="TabBar" parent="TabContainer" unique_id=1387772198]
 visible = false

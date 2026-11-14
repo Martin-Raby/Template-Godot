@@ -1,6 +1,6 @@
 [gd_scene format=3 uid="uid://bbnto4k0qufd7"]
 
-[ext_resource type="Theme" uid="uid://737drhkoj7au" path="res://ressources/themes/theme_label_principal.tres" id="1_m8uxh"]
+[ext_resource type="Theme" uid="uid://737drhkoj7au" path="res://ressources/themes/police_ecriture.tres" id="1_m8uxh"]
 
 [node name="Drop_Menu_Parametres" type="Control" unique_id=1271860067]
 layout_mode = 3
@@ -12,6 +12,7 @@ offset_bottom = -586.0
 grow_horizontal = 2
 grow_vertical = 2
 size_flags_horizontal = 3
+theme = ExtResource("1_m8uxh")
 
 [node name="HBoxContainer" type="HBoxContainer" parent="." unique_id=253820315]
 layout_mode = 1
@@ -31,7 +32,6 @@ size_flags_horizontal = 3
 [node name="Label" type="Label" parent="HBoxContainer" unique_id=647359948]
 custom_minimum_size = Vector2(264, 0)
 layout_mode = 2
-theme = ExtResource("1_m8uxh")
 theme_override_font_sizes/font_size = 32
 text = "TEXTE_PAR_DEFAUT"
 vertical_alignment = 1
@@ -44,7 +44,6 @@ layout_mode = 2
 [node name="OptionButton" type="OptionButton" parent="HBoxContainer" unique_id=2083895866]
 custom_minimum_size = Vector2(256, 64)
 layout_mode = 2
-theme = ExtResource("1_m8uxh")
 
 [node name="VSeparator3" type="VSeparator" parent="HBoxContainer" unique_id=930277434]
 modulate = Color(1, 1, 1, 0)
