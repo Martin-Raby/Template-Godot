@@ -27,7 +27,7 @@ func _process(delta):
 ## Entrée : Rien |
 ## Sortie : Rien |
 ## Action : Affiche le menu des paramètres |
-func _on_param_button_pressed():
+func _on_bouton_parametres_pressed():
 	menu_principal.visible = false
 	menu_parametres.set_process(true)
 	menu_parametres.visible = true
@@ -44,7 +44,7 @@ func on_exit_parametres() -> void :
 ## Entrée : Rien |
 ## Sortie : Rien |
 ## Action : Affiche la scène principale (et arrète les effets du menu principal |
-func _on_play_button_pressed():
+func _on_bouton_jouer_pressed():
 	get_tree().root.add_child(MainScene)
 	musique_fond.playing = false
 	menu_principal.visible = false
@@ -61,5 +61,5 @@ func _on_musique_fond_finished() -> void:
 func on_quitter () -> void :
 	musique_fond.playing = true
 	menu_principal.visible = true
-	MainScene = preload("res://scenes/Scene_principale/Scene_principale.tscn").instantiate()
+	MainScene = preload("res://scenes/scene_principale/scene_principale.tscn").instantiate()
 	MainScene.Quitter.connect(on_quitter)

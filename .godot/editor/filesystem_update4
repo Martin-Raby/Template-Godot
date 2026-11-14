@@ -6,3 +6,9 @@ res://scenes/menu_principal/menu_principal.gd
 res://scenes/parametres/menu_parametres.tscn
 res://scenes/parametres/menu_parametres.gd
 res://scenes/Scene_principale/Scene_principale.tscn
+res://scenes/Scene_principale/scene_principale.gd
+res://scenes/scene_principale/scene_principale.gd
+res://scenes/scene_principale/Scene_principale.tscn
+res://scenes/parametres/slide_menu/slide_menu.tscn
+res://scenes/scene_principale/scene_principale.tscn
+res://scripts/global/load_assets.gd

@@ -56,7 +56,7 @@ self_modulate = Color(1, 1, 1, 0)
 layout_mode = 2
 size_flags_vertical = 3
 
-[node name="play_button" type="TextureButton" parent="Menu_principal/HBoxContainer/VBoxMainButton" unique_id=549709171]
+[node name="BoutonJouer" type="TextureButton" parent="Menu_principal/HBoxContainer/VBoxMainButton" unique_id=549709171]
 custom_minimum_size = Vector2(248, 0)
 layout_mode = 2
 texture_normal = ExtResource("2_3jvir")
@@ -64,7 +64,7 @@ texture_pressed = ExtResource("3_po8b6")
 texture_hover = ExtResource("3_po8b6")
 stretch_mode = 0
 
-[node name="play_label" type="Label" parent="Menu_principal/HBoxContainer/VBoxMainButton/play_button" unique_id=1322282218]
+[node name="play_label" type="Label" parent="Menu_principal/HBoxContainer/VBoxMainButton/BoutonJouer" unique_id=1322282218]
 modulate = Color(0, 0, 0, 1)
 layout_mode = 0
 offset_right = 256.0
@@ -98,7 +98,7 @@ layout_mode = 2
 size_flags_vertical = 3
 theme_override_constants/separation = 355
 
-[node name="param_button" type="TextureButton" parent="Menu_principal/HBoxContainer/VBoxSideButton" unique_id=880730463]
+[node name="BoutonParametres" type="TextureButton" parent="Menu_principal/HBoxContainer/VBoxSideButton" unique_id=880730463]
 custom_minimum_size = Vector2(200, 150)
 layout_mode = 2
 texture_normal = ExtResource("4_eqv07")
@@ -106,7 +106,7 @@ texture_pressed = ExtResource("5_b5s1v")
 texture_hover = ExtResource("5_b5s1v")
 stretch_mode = 0
 
-[node name="param_label" type="Label" parent="Menu_principal/HBoxContainer/VBoxSideButton/param_button" unique_id=950879401]
+[node name="param_label" type="Label" parent="Menu_principal/HBoxContainer/VBoxSideButton/BoutonParametres" unique_id=950879401]
 modulate = Color(0, 0, 0, 1)
 layout_mode = 0
 offset_left = 22.0
@@ -138,6 +138,6 @@ layout_mode = 1
 autoplay = true
 bus = &"Music"
 
-[connection signal="pressed" from="Menu_principal/HBoxContainer/VBoxMainButton/play_button" to="." method="_on_play_button_pressed"]
-[connection signal="pressed" from="Menu_principal/HBoxContainer/VBoxSideButton/param_button" to="." method="_on_param_button_pressed"]
+[connection signal="pressed" from="Menu_principal/HBoxContainer/VBoxMainButton/BoutonJouer" to="." method="_on_bouton_jouer_pressed"]
+[connection signal="pressed" from="Menu_principal/HBoxContainer/VBoxSideButton/BoutonParametres" to="." method="_on_bouton_parametres_pressed"]
 [connection signal="finished" from="MusiqueFond" to="." method="_on_musique_fond_finished"]
