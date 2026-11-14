@@ -1,6 +1,6 @@
 [gd_scene format=3 uid="uid://bbnto4k0qufd7"]
 
-[ext_resource type="FontFile" uid="uid://c2mb6de2hcgpy" path="res://ressources/polices/OpenDyslexic-Regular.otf" id="1_2x8rq"]
+[ext_resource type="Theme" uid="uid://737drhkoj7au" path="res://ressources/themes/theme_label_principal.tres" id="1_m8uxh"]
 
 [node name="Drop_Menu_Parametres" type="Control" unique_id=1271860067]
 layout_mode = 3
@@ -31,6 +31,7 @@ size_flags_horizontal = 3
 [node name="Label" type="Label" parent="HBoxContainer" unique_id=647359948]
 custom_minimum_size = Vector2(264, 0)
 layout_mode = 2
+theme = ExtResource("1_m8uxh")
 theme_override_font_sizes/font_size = 32
 text = "TEXTE_PAR_DEFAUT"
 vertical_alignment = 1
@@ -43,8 +44,7 @@ layout_mode = 2
 [node name="OptionButton" type="OptionButton" parent="HBoxContainer" unique_id=2083895866]
 custom_minimum_size = Vector2(256, 64)
 layout_mode = 2
-theme_override_fonts/font = ExtResource("1_2x8rq")
-theme_override_font_sizes/font_size = 22
+theme = ExtResource("1_m8uxh")
 
 [node name="VSeparator3" type="VSeparator" parent="HBoxContainer" unique_id=930277434]
 modulate = Color(1, 1, 1, 0)

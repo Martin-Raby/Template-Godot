@@ -1,5 +1,6 @@
 [gd_scene format=3 uid="uid://d0ulsovtj84go"]
 
+[ext_resource type="Theme" uid="uid://dgt61hrtbtmsl" path="res://ressources/themes/theme_label_secondaire.tres" id="1_e4r8t"]
 [ext_resource type="PackedScene" uid="uid://bql1rrrswwr0y" path="res://scenes/parametres/menu_deroulant/menu_deroulant_fenetre.tscn" id="1_ykvgu"]
 [ext_resource type="PackedScene" uid="uid://d30k33gvnoo46" path="res://scenes/parametres/menu_deroulant/menu_deroulant_resolution.tscn" id="2_e4r8t"]
 [ext_resource type="PackedScene" uid="uid://dah5m6qsf1fdr" path="res://scenes/parametres/slide_menu/slide_menu.tscn" id="3_4tew8"]
@@ -44,6 +45,7 @@ offset_right = -100.0
 offset_bottom = -50.0
 grow_horizontal = 2
 grow_vertical = 2
+theme = ExtResource("1_e4r8t")
 tab_alignment = 1
 current_tab = 0
 

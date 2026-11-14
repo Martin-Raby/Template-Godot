@@ -20,3 +20,5 @@ res://scenes/parametres/menu_deroulant/menu_deroulant_fenetre.tscn
 res://scenes/parametres/menu_deroulant/menu_deroulant_resolution.gd
 res://scenes/parametres/slide_menu/slide_menu.gd
 res://scripts/global/global.gd
+res://ressources/themes/theme_label.tres
+res://ressources/themes/theme_label_secondaire.tres
