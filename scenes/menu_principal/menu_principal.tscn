@@ -117,6 +117,27 @@ layout_mode = 2
 size_flags_vertical = 3
 theme_override_constants/separation = 355
 
+[node name="BoutonCredits" type="TextureButton" parent="ContainerMenuPrincipal/HBoxContainer/VBoxRight" unique_id=860122595]
+custom_minimum_size = Vector2(200, 150)
+layout_mode = 2
+texture_normal = ExtResource("4_eqv07")
+texture_pressed = ExtResource("5_b5s1v")
+texture_hover = ExtResource("5_b5s1v")
+stretch_mode = 0
+
+[node name="LabelCredits" type="Label" parent="ContainerMenuPrincipal/HBoxContainer/VBoxRight/BoutonCredits" unique_id=30659139]
+modulate = Color(0, 0, 0, 1)
+layout_mode = 0
+offset_left = 22.0
+offset_top = 39.0
+offset_right = 178.0
+offset_bottom = 103.0
+theme_override_font_sizes/font_size = 32
+text = "Credits"
+horizontal_alignment = 1
+vertical_alignment = 1
+language = "fr_FR"
+
 [node name="BoutonParametres" type="TextureButton" parent="ContainerMenuPrincipal/HBoxContainer/VBoxRight" unique_id=880730463]
 custom_minimum_size = Vector2(200, 150)
 layout_mode = 2
@@ -132,7 +153,7 @@ offset_left = 22.0
 offset_top = 39.0
 offset_right = 178.0
 offset_bottom = 103.0
-theme_override_font_sizes/font_size = 19
+theme_override_font_sizes/font_size = 26
 text = "Paramètres"
 horizontal_alignment = 1
 vertical_alignment = 1
@@ -159,5 +180,6 @@ bus = &"Music"
 
 [connection signal="pressed" from="ContainerMenuPrincipal/HBoxContainer/VBoxLeft/BoutonJouer" to="." method="_on_bouton_jouer_pressed"]
 [connection signal="pressed" from="ContainerMenuPrincipal/HBoxContainer/VBoxLeft/BoutonQuitter" to="." method="on_bouton_quitter_pressed"]
+[connection signal="pressed" from="ContainerMenuPrincipal/HBoxContainer/VBoxRight/BoutonCredits" to="." method="_on_bouton_parametres_pressed"]
 [connection signal="pressed" from="ContainerMenuPrincipal/HBoxContainer/VBoxRight/BoutonParametres" to="." method="_on_bouton_parametres_pressed"]
 [connection signal="finished" from="MusiqueFond" to="." method="_on_musique_fond_finished"]
