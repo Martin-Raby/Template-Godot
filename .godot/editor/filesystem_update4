@@ -1,1 +1,8 @@
-res://README.md
+res://menu_principal/menu_principal.tscn
+res://scenes/menu_principal/menu_principal.tscn
+res://scenes/Scene_principale.tscn
+res://scenes/parametres/tab_parametres.tscn
+res://scenes/menu_principal/menu_principal.gd
+res://scenes/parametres/menu_parametres.tscn
+res://scenes/parametres/menu_parametres.gd
+res://scenes/Scene_principale/Scene_principale.tscn

@@ -1,0 +1,11 @@
+[gd_scene format=3 uid="uid://d30k33gvnoo46"]
+
+[ext_resource type="PackedScene" uid="uid://bbnto4k0qufd7" path="res://scenes/parametres/menu_deroulant/menu_deroulant.tscn" id="1_ufhut"]
+[ext_resource type="Script" uid="uid://dugorg8vge856" path="res://scenes/parametres/menu_deroulant/menu_deroulant_resolution.gd" id="2_53mh2"]
+
+
+[node name="Drop_Menu_Resolution" instance=ExtResource("1_ufhut")]
+script = ExtResource("2_53mh2")
+
+[node name="Label" parent="HBoxContainer" index="1"]
+text = "Résolution"
