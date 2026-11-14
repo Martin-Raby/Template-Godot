@@ -57,3 +57,9 @@ func on_quitter () -> void :
 	MenuPrincipal.visible = true
 	scene_principale = preload("res://scenes/scene_principale/scene_principale.tscn").instantiate()
 	scene_principale.Quitter.connect(on_quitter)
+
+## Entrée : Rien |
+## Sortie : Rien |
+## Action : Quitte le jeu quand le bouton "Quitter" est utilisé |
+func on_bouton_quitter_pressed() -> void:
+	get_tree().quit()

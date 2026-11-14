@@ -81,6 +81,25 @@ self_modulate = Color(1, 1, 1, 0)
 layout_mode = 2
 size_flags_vertical = 3
 
+[node name="BoutonQuitter" type="TextureButton" parent="ContainerMenuPrincipal/HBoxContainer/VBoxLeft" unique_id=2105164533]
+custom_minimum_size = Vector2(248, 0)
+layout_mode = 2
+texture_normal = ExtResource("2_3jvir")
+texture_pressed = ExtResource("3_po8b6")
+texture_hover = ExtResource("3_po8b6")
+stretch_mode = 0
+
+[node name="LabelQuitter" type="Label" parent="ContainerMenuPrincipal/HBoxContainer/VBoxLeft/BoutonQuitter" unique_id=1924010755]
+modulate = Color(0, 0, 0, 1)
+layout_mode = 0
+offset_right = 256.0
+offset_bottom = 128.0
+theme_override_font_sizes/font_size = 32
+text = "Quitter"
+horizontal_alignment = 1
+vertical_alignment = 1
+language = "fr_FR"
+
 [node name="VSeparator2" type="VSeparator" parent="ContainerMenuPrincipal/HBoxContainer" unique_id=2116130754]
 modulate = Color(1, 1, 1, 0)
 self_modulate = Color(1, 1, 1, 0)
@@ -139,5 +158,6 @@ autoplay = true
 bus = &"Music"
 
 [connection signal="pressed" from="ContainerMenuPrincipal/HBoxContainer/VBoxLeft/BoutonJouer" to="." method="_on_bouton_jouer_pressed"]
+[connection signal="pressed" from="ContainerMenuPrincipal/HBoxContainer/VBoxLeft/BoutonQuitter" to="." method="on_bouton_quitter_pressed"]
 [connection signal="pressed" from="ContainerMenuPrincipal/HBoxContainer/VBoxRight/BoutonParametres" to="." method="_on_bouton_parametres_pressed"]
 [connection signal="finished" from="MusiqueFond" to="." method="_on_musique_fond_finished"]
