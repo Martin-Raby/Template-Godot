@@ -5,6 +5,7 @@ extends Control
 @onready var MenuParametres = $MenuParametres
 @onready var MusiqueFond = $MusiqueFond
 @onready var BoutonQuitter = $ContainerMenuPrincipal/HBoxContainer/VBoxLeft/BoutonQuitter
+@onready var Credits = $Credits
 
 # Pré charge la scène
 var scene_principale = preload("res://scenes/scene_principale/scene_principale.tscn").instantiate()
@@ -69,4 +70,10 @@ func on_bouton_quitter_pressed() -> void:
 
 
 func on_bouton_credits_pressed() -> void:
-	pass # Replace with function body.
+	MenuPrincipal.visible = false
+	Credits.visible = true
+
+
+func on_credits_fini() -> void:
+	MenuPrincipal.visible = true
+	Credits.visible = false

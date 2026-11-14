@@ -24,3 +24,5 @@ res://ressources/themes/theme_label.tres
 res://ressources/themes/theme_label_secondaire.tres
 res://ressources/themes/theme_label_principal.tres
 res://ressources/themes/police_ecriture.tres
+res://scenes/credits/Credits.tscn
+res://scenes/credits/credits.gd

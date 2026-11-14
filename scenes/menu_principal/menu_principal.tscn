@@ -7,6 +7,7 @@
 [ext_resource type="Texture2D" uid="uid://8gnaloa0vljm" path="res://ressources/images/ui/menu_jeu_tiny_button.svg" id="4_eqv07"]
 [ext_resource type="Texture2D" uid="uid://dgkers5n24soj" path="res://ressources/images/ui/menu_jeu_tiny_button_survole.svg" id="5_b5s1v"]
 [ext_resource type="PackedScene" uid="uid://di4chlep1t1or" path="res://scenes/parametres/menu_parametres.tscn" id="6_8kbuk"]
+[ext_resource type="PackedScene" uid="uid://5r6po3u7d7sa" path="res://scenes/credits/Credits.tscn" id="8_po8b6"]
 
 [node name="MenuPrincipal" type="Control" unique_id=843324627]
 layout_mode = 3
@@ -172,6 +173,10 @@ layout_mode = 2
 visible = false
 layout_mode = 1
 
+[node name="Credits" parent="." unique_id=1168084038 instance=ExtResource("8_po8b6")]
+visible = false
+layout_mode = 1
+
 [node name="MusiqueFond" type="AudioStreamPlayer" parent="." unique_id=848761638]
 autoplay = true
 bus = &"Music"
@@ -180,4 +185,5 @@ bus = &"Music"
 [connection signal="pressed" from="ContainerMenuPrincipal/HBoxContainer/VBoxLeft/BoutonQuitter" to="." method="on_bouton_quitter_pressed"]
 [connection signal="pressed" from="ContainerMenuPrincipal/HBoxContainer/VBoxRight/BoutonCredits" to="." method="on_bouton_credits_pressed"]
 [connection signal="pressed" from="ContainerMenuPrincipal/HBoxContainer/VBoxRight/BoutonParametres" to="." method="on_bouton_parametres_pressed"]
+[connection signal="credits_fini" from="Credits" to="." method="on_credits_fini"]
 [connection signal="finished" from="MusiqueFond" to="." method="_on_musique_fond_finished"]
