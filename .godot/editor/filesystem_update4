@@ -22,3 +22,4 @@ res://scenes/parametres/slide_menu/slide_menu.gd
 res://scripts/global/global.gd
 res://ressources/themes/theme_label.tres
 res://ressources/themes/theme_label_secondaire.tres
+res://ressources/themes/theme_label_principal.tres

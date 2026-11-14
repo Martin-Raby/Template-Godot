@@ -1,7 +1,4 @@
 [gd_resource type="Theme" format=3 uid="uid://737drhkoj7au"]
 
-[ext_resource type="FontFile" uid="uid://c2mb6de2hcgpy" path="res://ressources/polices/OpenDyslexic-Regular.otf" id="1_aprej"]
-
 [resource]
-default_font = ExtResource("1_aprej")
 default_font_size = 28

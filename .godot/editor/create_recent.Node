@@ -1,9 +1,9 @@
+HSeparator
+HBoxContainer
 Button
 AudioStreamPlayer
 Area2D
 AudioStreamPlayer2D
-HBoxContainer
 VSeparator
 TextureRect
 VBoxContainer
-HSeparator

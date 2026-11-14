@@ -14,6 +14,8 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
 script = ExtResource("1_2rsun")
 
 [node name="TabContainer" type="MarginContainer" parent="." unique_id=1147720864]
@@ -28,15 +30,25 @@ theme_override_constants/margin_top = 12
 theme_override_constants/margin_right = 12
 theme_override_constants/margin_bottom = 12
 
-[node name="VBoxContainer" type="VBoxContainer" parent="TabContainer" unique_id=691470579]
+[node name="HBoxContainer" type="HBoxContainer" parent="TabContainer" unique_id=808675542]
 layout_mode = 2
 
-[node name="VSeparator" type="VSeparator" parent="TabContainer/VBoxContainer" unique_id=15804178]
+[node name="VSeparator" type="VSeparator" parent="TabContainer/HBoxContainer" unique_id=946060111]
+modulate = Color(1, 1, 1, 0)
+custom_minimum_size = Vector2(50, 0)
+layout_mode = 2
+theme_override_constants/separation = 15
+
+[node name="VBoxContainer" type="VBoxContainer" parent="TabContainer/HBoxContainer" unique_id=691470579]
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="VSeparator" type="HSeparator" parent="TabContainer/HBoxContainer/VBoxContainer" unique_id=447898511]
 modulate = Color(1, 1, 1, 0)
 layout_mode = 2
 theme_override_constants/separation = 15
 
-[node name="Label" type="Label" parent="TabContainer/VBoxContainer" unique_id=957079525]
+[node name="Label" type="Label" parent="TabContainer/HBoxContainer/VBoxContainer" unique_id=957079525]
 layout_mode = 2
 theme = ExtResource("2_myggc")
 theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
@@ -46,11 +58,15 @@ text = "Options"
 horizontal_alignment = 1
 vertical_alignment = 1
 
-[node name="Tab_Parametres" parent="TabContainer/VBoxContainer" unique_id=1960974556 instance=ExtResource("2_hg7gg")]
+[node name="VSeparator2" type="HSeparator" parent="TabContainer/HBoxContainer/VBoxContainer" unique_id=1867897404]
+modulate = Color(1, 1, 1, 0)
 layout_mode = 2
-size_flags_vertical = 3
+theme_override_constants/separation = 15
 
-[node name="BoutonQuitter" type="TextureButton" parent="TabContainer/VBoxContainer" unique_id=499272613]
+[node name="Tab_Parametres" parent="TabContainer/HBoxContainer/VBoxContainer" unique_id=1960974556 instance=ExtResource("2_hg7gg")]
+layout_mode = 2
+
+[node name="BoutonQuitter" type="TextureButton" parent="TabContainer/HBoxContainer/VBoxContainer" unique_id=499272613]
 custom_minimum_size = Vector2(200, 150)
 layout_mode = 2
 size_flags_horizontal = 4
@@ -61,7 +77,7 @@ texture_hover = ExtResource("4_fo4ob")
 texture_focused = ExtResource("4_fo4ob")
 stretch_mode = 0
 
-[node name="Label" type="Label" parent="TabContainer/VBoxContainer/BoutonQuitter" unique_id=2060514815]
+[node name="Label" type="Label" parent="TabContainer/HBoxContainer/VBoxContainer/BoutonQuitter" unique_id=2060514815]
 modulate = Color(0, 0, 0, 1)
 self_modulate = Color(0, 0, 0, 1)
 layout_mode = 0
@@ -75,8 +91,10 @@ text = "Retour"
 horizontal_alignment = 1
 vertical_alignment = 1
 
-[node name="VSeparator2" type="VSeparator" parent="TabContainer/VBoxContainer" unique_id=1190580097]
+[node name="VSeparator2" type="VSeparator" parent="TabContainer/HBoxContainer" unique_id=1649142882]
+modulate = Color(1, 1, 1, 0)
+custom_minimum_size = Vector2(50, 0)
 layout_mode = 2
 theme_override_constants/separation = 15
 
-[connection signal="pressed" from="TabContainer/VBoxContainer/BoutonQuitter" to="." method="_on_exit_button_pressed"]
+[connection signal="pressed" from="TabContainer/HBoxContainer/VBoxContainer/BoutonQuitter" to="." method="_on_exit_button_pressed"]
