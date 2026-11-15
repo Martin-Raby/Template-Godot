@@ -5,18 +5,6 @@
 [ext_resource type="Texture2D" uid="uid://ckj5oqxrc2bgd" path="res://ressources/images/ui/menu_jeu_button.svg" id="3_kb4v8"]
 [ext_resource type="Texture2D" uid="uid://b4elxs7cenqeq" path="res://ressources/images/ui/menu_jeu_button_survole.svg" id="4_yudwt"]
 
-[sub_resource type="Animation" id="Animation_kb4v8"]
-length = 0.001
-
-[sub_resource type="Animation" id="Animation_ymb2p"]
-resource_name = "defilement_credit"
-
-[sub_resource type="AnimationLibrary" id="AnimationLibrary_kb4v8"]
-_data = {
-&"RESET": SubResource("Animation_kb4v8"),
-&"defilement_credit": SubResource("Animation_ymb2p")
-}
-
 [node name="Credits" type="Control" unique_id=1168084038]
 layout_mode = 3
 anchors_preset = 15
@@ -37,9 +25,6 @@ offset_top = 50.0
 offset_right = 337.0
 offset_bottom = 89.0
 text = "Insérez ici vos crédits"
-
-[node name="AnimationPlayer" type="AnimationPlayer" parent="TexteCredits" unique_id=90589575]
-libraries/ = SubResource("AnimationLibrary_kb4v8")
 
 [node name="BoutonQuitter" type="TextureButton" parent="." unique_id=862728258]
 custom_minimum_size = Vector2(248, 0)
