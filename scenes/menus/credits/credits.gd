@@ -5,6 +5,7 @@ extends Control
 signal credits_fini
 
 func _ready() -> void:
+	self.visibility_changed.connect(_on_visibility_changed)
 	if Global.DefilementCredits :
 		TexteCredits.position = Vector2(50.0, get_viewport().size[1])
 
@@ -18,4 +19,5 @@ func finir_credits():
 	credits_fini.emit()
 
 func _on_visibility_changed() -> void:
-	pass # Replace with function body.
+	if Global.DefilementCredits :
+		TexteCredits.position = Vector2(50.0, get_viewport().size[1])
