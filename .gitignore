@@ -1,3 +1,52 @@
+# Godot 4 .gitignore from ziva.sh/tools/godot-gitignore-generator
+
+# Editor cache: imported assets, shader cache, editor state and export credentials.
+# Keep the .import and .uid files next to your assets: they hold import settings and IDs.
 .godot/
 
-.import/
+# Binary translations Godot generates from CSV files
+*.translation
+
+# Copies of GDExtension libraries the Windows editor makes for hot reload
+~*.dll
+
+# Android build template from Project > Install Android Build Template
+/android/
+
+# Exported builds
+/builds/
+
+# Visual Studio user files. Keep the .sln and .csproj files in Git.
+.vs/
+*.user
+*.suo
+
+# macOS Finder metadata
+.DS_Store
+.AppleDouble
+.LSOverride
+._*
+
+# Windows Explorer thumbnails and folder settings
+Thumbs.db
+ehthumbs.db
+[Dd]esktop.ini
+$RECYCLE.BIN/
+
+# Linux editor backups, file manager metadata and trash
+*~
+.directory
+.Trash-*
+.fuse_hidden*
+.nfs*
+
+# VS Code: keep shared settings, launch and task files; ignore the rest
+.vscode/*
+!.vscode/settings.json
+!.vscode/tasks.json
+!.vscode/launch.json
+!.vscode/extensions.json
+
+# JetBrains Rider per-user project settings
+.idea/
+*.DotSettings.user
