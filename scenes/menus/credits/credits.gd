@@ -5,6 +5,7 @@ extends Control
 signal credits_fini
 
 func _ready() -> void:
+	#Le signal doit être connecté ici, s'il est fait dans le gestionnaire de signal, il tente de connecter une fonction avant que le noeud enfant qu'utilise la fonction soit crée (et donc crash)
 	self.visibility_changed.connect(_on_visibility_changed)
 	if Global.DefilementCredits :
 		TexteCredits.position = Vector2(50.0, get_viewport().size[1])
